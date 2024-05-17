@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waitlist</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="boxicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      type="text/css"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5489484710028105"
+      crossorigin="anonymous"
+      ></script>
+    </head>
+    <body>
+      <div class="spiner" display="none">  
+        <div id="loading"></div>
+      </div>
+      <div class="main">
+        <section class="head container">
+          <nav class="nav container">
+            <h1>FLEXGIG</h1>
+            <button class="btn-head" id="btn_head" onclick="goToForm()">
+              Join the Waitlist
+            </button>
+          </nav>
+          
+          <div class="text-head">
+            <h2>Join the Future of Freelancing with FlexGig</h2>
+            <p>
+              Elevate Your Work-Life Balance and Embrace the Power of Location
+              Independence. Join the Waitlist Today.
+            </p>
+            <button class="btn-head" id="btn-head" onclick="goToForm()">
+              Join the Waitlist
+            </button>
+          </div>
+          <div class="elements">
+            <img src="images/Ellipse 862.png" alt="" class="ellipse-1" />
+            <img src="images/Ellipse 864.png" alt="" class="ellipse-2" />
+            <img src="images/Ellipse 865.png" alt="" class="ellipse-3" />
+            <img src="images/Ellipse 862.png" alt="" class="ellipse-4" />
+            <img src="images/Frame 1000002612.png" alt="" class="img-1" />
+            <img src="images/Frame 1000002613.png" alt="" class="img-2" />
+          </div>
+        </section>
+        
+        <section id="values">
+          <h2>Why Flexgig?</h2>
+          <p class="values_p">Stand out from the rest</p>
+          <!-- Box 1 -->
+          <div class="value container" id="value">
+            <div class="box">
+              <p>
+                We believe in empowering both freelancers and businesses with true
+                flexibility. Our platform is designed to cater to the ever-evolving
+                needs of the modern workforce.
+              </p>
+            </div>
+            <!-- Box 2 -->
+            <div class="box">
+              <p>
+                Diversity fuels innovation, and at FlexGig, we celebrate diversity
+                like no other. Our talent pool is a rich tapestry of skills,
+                cultures, and perspectives.
+              </p>
+            </div>
+            <!-- Box 3 -->
+            <div class="box">
+              <p>
+                Collaboration shouldn't be confined by geographical constraints.
+                FlexGig's advanced platform facilitates seamless collaboration
+                regardless of where you are.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="form-section" id="form-section">
+          
+          <div class="form container">
+            <div class="caption">
+              <img
+              src="images/64c7b476d9a2f343eb251643_Vector 780 1.svg"
+              alt=""
+              class="vector1"
+              />
+              <div class="caption_index">
+                <h2>Unlock Your Freelance Potential or Find Top Talent!</h2>
+                <p>
+                  Join the Waitlist as a Client, Freelancer, or Agency. Discover
+                  Seamless Collaboration, Secure Payments, and Success Together.
+                </p>
+              </div>
+              <img
+              src="images/64c7b476d9a2f343eb251643_Vector 780 2.png"
+              alt=""
+              class="vector2"
+              />
+            </div>
+            <div class="form-index">
+              <form
+              name="submit-to-google-sheet"
+              id="myForm"
+              onsubmit="submitForm()"
+              >
+              <label for="name">Name</label>
+              <input
+              type="text"
+              placeholder="Enter full name"
+              name="Name"
+              id="name"
+              required
+              />
+              <label for="email">Email address</label>
+              <input
+              type="email"
+              name="Email address"
+              placeholder="Enter email"
+              id="email"
+              required
+              />
+              <label for="client"
+              >Are you a client, freelancer or an agency?</label
+              >
+              
+              <select required id="client" name="Which are you?">
+                <option value="Client">Client</option>
+                <option value="Freelancer">Freelancer</option>
+                <option value="Agency">Agency</option>
+              </select>
+              <label for="country">What is your country of residence?</label>
+              <select required id="country" name="Country of Residence">
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Benin">Benin</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bosnia and Herzegovina">
+                  Bosnia and Herzegovina
+                </option>
+                <option value="Botswana">Botswana</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Canada">Canada</option>
+                <option value="Central African Republic">
+                  Central African Republic
+                </option>
+                <option value="Chad">Chad</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Comoros">Comoros</option>
+                <option value="Congo">Congo</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Djibouti">Djibouti</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Eswatini">Eswatini</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Germany">Germany</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Greece">Greece</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guinea-Bissau">Guinea-Bissau</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Iceland">Iceland</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Laos">Laos</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Lesotho">Lesotho</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libya">Libya</option>
+                <option value="Liechtenstein">Liechtenstein</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Malawi">Malawi</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Mali">Mali</option>
+                <option value="Malta">Malta</option>
+                <option value="Mauritania">Mauritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Moldova">Moldova</option>
+                <option value="Monaco">Monaco</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montenegro">Montenegro</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Namibia">Namibia</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Niger">Niger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="North Korea">North Korea</option>
+                <option value="North Macedonia">North Macedonia</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Panama">Panama</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Phillipines">Phillipines</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Romania">Romania</option>
+                <option value="Russia">Russia</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="San Marino">San Marino</option>
+                <option value="Sao Tome and Principe">
+                  Sao Tome and Principe
+                </option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Senegal">Senegal</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Seychelles">Seychelles</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Korea">South Korea</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Sudan">Sudan</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Syria">Syria</option>
+                <option value="Tajikstan">Tajikstan</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Togo">Togo</option>
+                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States of America">
+                  United States of America
+                </option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zambia">Zambia</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+              </select>
+              <button type="submit" class="form-btn">Join Waitlist</button>
+            </form>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section class="accordion-section">
+        <h2>FAQs</h2>
+        <p id="first_p">
+          Know more about FlexGig by checking out our frequently asked questions.
+        </p>
+        <ul class="accordion">
+          <li class="list">
+            <input type="radio" name="accordion" id="first" checked />
+            <label for="first">How does FlexGig work?</label>
+            <div class="content">
+              <p>
+                FlexGig is a freelance marketplace where freelancers can find
+                remote job opportunities. Employers post job listings and
+                freelancers can submit proposals for the jobs they are interested
+                in. Once hired, freelancers can work remotely on their own
+                schedule, based on the agreement with the client.
+              </p>
+            </div>
+          </li>
+          <li class="list">
+            <input type="radio" name="accordion" id="second" />
+            <label for="second"
+            >How much does it cost to send proposals on FlexGig?
+          </label>
+          <div class="content">
+            <p>
+              Sending proposals on FlexGig is completely free. Freelancers do
+              not need to spend any connects or money to submit their proposals.
+            </p>
+          </div>
+        </li>
+        <li class="list">
+          <input type="radio" name="accordion" id="third" />
+          <label for="third">Can I upskill with courses on FlexGig? </label>
+          <div class="content">
+            <p>
+              Yes, FlexGig offers a variety of courses for freelancers to
+              upskill themselves. These courses can help freelancers enhance
+              their skills and increase their chances of getting hired for
+              better-paying projects.
+            </p>
+          </div>
+        </li>
+        <li class="list">
+          <input type="radio" name="accordion" id="fourth" />
+          <label for="fourth"
+          >How can I connect with other professionals in my field on Flexgig?
+        </label>
+        <div class="content">
+          <p>
+            FlexGig has career communities where freelancers can connect with
+            other professionals in their industry. These communities are based
+            on their profile and the services they offer. Freelancers can join
+            the relevant community and engage in discussions, networking, and
+            collaboration with other like-minded professionals.
+          </p>
+        </div>
+      </li>
+      <li class="list">
+        <input type="radio" name="accordion" id="fifth" />
+        <label for="fifth"
+        >How can I receive notifications and messages from clients on
+        FlexGig?
+      </label>
+      <div class="content">
+        <p>
+          FlexGig has a notifications and messages icon where freelancers
+          can easily access any communications from their clients. They will
+          be alerted about new messages and any updates regarding their job
+          applications or ongoing projects.
+        </p>
+      </div>
+    </li>
+    <li class="list">
+      <input type="radio" name="accordion" id="sixth" />
+      <label for="sixth">How can I get customer support on FlexGig? </label>
+      <div class="content">
+        <p>
+          FlexGig has a dedicated customer support page where freelancers
+          can find information on how to get in touch with the support team.
+          They can live chat, send a WhatsApp message, call a toll-free
+          number, or send an email to support@flexgig.com for assistance.
+        </p>
+      </div>
+    </li>
+    <li class="list">
+      <input type="radio" name="accordion" id="seventh" />
+      <label for="seventh">How can I get verified on FlexGig? </label>
+      <div class="content">
+        <p>
+          Freelancers can apply for verification on FlexGig by providing
+          their government-approved ID card, full name, email address, and
+          undergoing a selfie verification process. Additionally, an OTP
+          code will be sent to ensure that the verification process is
+          completed by a real person rather than a bot.
+        </p>
+      </div>
+    </li>
+    <li class="list">
+      <input type="radio" name="accordion" id="eigth" />
+      <label for="eigth">Can I take skill assessments on FlexGig? </label>
+      <div class="content">
+        <p>
+          Yes, FlexGig offers skill assessments similar to LinkedIn. These
+          assessments are part of the verification process and help
+          determine if freelancers are qualified and skilled in the areas
+          they are applying for verification.
+        </p>
+      </div>
+    </li>
+    <li>
+      <input type="radio" name="accordion" id="ninth" />
+      <label for="ninth"
+      >What additional features and benefits does FlexGig offer?
+    </label>
+    <div class="content">
+      <p>
+        FlexGig provides verification badges for freelancers, agencies,
+        and clients who have passed the necessary screening process. This
+        helps streamline the hiring process and provides credibility to
+        the parties involved. Additionally, AI interview questions may be
+        used to assess freelancers' suitability for specific projects or
+        roles.
+      </p>
+    </div>
+  </li>
+</ul>
+<button class="form-btn" id="accordion-btn" onclick="goToForm()">
+  Join Waitlist
+</button>
+</section>
+<section class="connect">
+  <h2>Connect with us to stay updated</h2>
+  <div class="social_icons">
+    <ul id="social_icons">
+      <li>
+        <a
+        href="https://www.facebook.com/profile.php?id=100087930759983&mibextid=ZbWKwL"
+        ><i class="bx bxl-facebook"></i>facebook</a
+        >
+      </li>
+      <li>
+        <a href="https://twitter.com/FlexGig?t=oYP-92RP4VQFR8VChPEl0w&s=09"
+        ><i class="bx bxl-twitter"></i>twitter</a
+        >
+      </li>
+      <li>
+        <a href="https://www.threads.net/@flexiremote"
+        ><img src="images/fa6-brands_square-threads.png" alt="" />
+        thread</a
+        >
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/pseudogigs"
+        ><i class="bx bxl-linkedin-square"></i>linkedin</a
+        >
+      </li>
+      <li>
+        <a href="https://instagram.com/flexgigs?igshid=NTc4MTIwNjQ2YQ=="
+        ><i class="bx bxl-instagram"></i>instagram</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- Footer -->
+<section class="footer" id="footer">
+  <div class="footer-container container">
+    <div class="footer-box">
+      <h3>About</h3>
+      <a href="#">Our story</a>
+      <a href="#">About us</a>
+      <a href="#">FAQs</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-box">
+      <h3>Users</h3>
+      <a href="#">How to post job</a>
+      <a href="#">Find job</a>
+      <a href="#">Register courses</a>
+    </div>
+    <div class="footer-box">
+      <h3>Resources</h3>
+      <a href="#">How to post job</a>
+      <a href="#">Resources</a>
+    </div>
+    <div class="footer-box">
+      <h3>Mobile App</h3>
+      <a href="#" class="apple-str"
+      ><i class="bx bxl-apple"></i>
+      <div>
+        <h6>Available on the</h6>
+        <p>Apple Store</p>
+      </div></a
+      >
+      <a href="#" class="apple-str"
+      ><i class="bx bxl-play-store"></i>
+      <div>
+        <h6>Android app on</h6>
+        <p>GOOGLE PLAY</p>
+      </div></a
+      >
+      <div class="social">
+        <h3>Follow us</h3>
+        <a
+        href="https://www.facebook.com/profile.php?id=100087930759983&mibextid=ZbWKwL"
+        ><i class="bx bxl-facebook"></i
+          ></a>
+          <a
+          href="https://twitter.com/FlexGig?t=oYP-92RP4VQFR8VChPEl0w&s=09"
+          class="icon"
+          ><i class="bx bxl-twitter"></i
+            ></a>
+            <a href="https://www.linkedin.com/company/pseudogigs" class="icon"
+            ><i class="bx bxl-linkedin-square"></i
+              ></a>
+              <a
+              href="https://instagram.com/flexgigs?igshid=NTc4MTIwNjQ2YQ=="
+              class="icon"
+              ><i class="bx bxl-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>&#169;FlexGig, 2023.</p>
+        </div>
+      </div>
+        
+        <script>
+          const scriptURL =
+          "https://script.google.com/macros/s/AKfycbzB_jrpd-63KkvP6l8gOvvYn5eMZ6Od9wpvdbs5mooBnWAuZOoPI6xOVk9dwF1N4Ff9BA/exec";
+          const form = document.forms["submit-to-google-sheet"];
+          var formData = $(this).serialize();
+      var myForm = document.getElementById("myForm");
+
+      const loading = document.querySelector(".spiner");
+      const submit = document.getElementById("form-btn");
+      const opacity = document.querySelector(".main");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        loading.style.display = "flex"; 
+        opacity.classList.add("opacity");
+
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) =>
+            $.ajax({
+              type: "POST",
+              url: "https://script.google.com/macros/s/AKfycbzB_jrpd-63KkvP6l8gOvvYn5eMZ6Od9wpvdbs5mooBnWAuZOoPI6xOVk9dwF1N4Ff9BA/exec",
+              data: formData,
+              success: function (response) {
+                Swal.fire({
+                  icon: "success",
+                  title: "You have been added to our waitlist.",
+                  text: "We will let you know when FlexGig is ready",
+                  confirmButtonText: "OK",
+                  timer: 2000,
+                }).then(() => {
+                  //Reload the webpage
+                  location.reload();
+                });
+
+                //Reset form fields
+                $(myForm)[0].reset();
+                loading.style.display = "none";
+                opacity.classList.remove("opacity");
+                submit.disabled = true;
+              },
+            })
+            
+            
+          )
+          
+          .catch((error) => console.error("Error!", error.message));
+          
+      });
+
+      function goToForm() {
+        document
+          .getElementById("form-section")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
